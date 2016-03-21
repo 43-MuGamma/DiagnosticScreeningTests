@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang = "eng">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="A Port of the Depression Anxiety Screening Test">
+        <title>Anxiety Diagnostic Screening Test</title>
+    </head>
+    <body>
+    <h1>Anxiety Screening Test</h1>
+
+    <form id="questionForm">  
+        <div id="question1">
+            <div class="question1">
+                <label for="q1">1.)&nbsp;&nbsp; Do you worry about things, such as <strong>work</strong> or <strong>school</strong>, more days than not?</label>
+                <select id="q1">
+                    <option value="NO">No</option>
+                    <option value="YES">Yes</option>
+                </select>
+            </div>
+        </div>
+            <p></p>
+        <div id="question2">
+            <div class="question2">
+                <label for="q2">2.)&nbsp;&nbsp;Do you find it difficult to stop thoughts realated to worrying?</label>
+                <select id="q2">
+                    <option value="NO">No</option>
+                    <option value="YES">Yes</option>
+                </select>
+            </div>
+        </div>
+            <p></p>
+        <div id="question3">
+            <div class="question3">
+                <label for="q3">3.)&nbsp;&nbsp;Do you often feel <strong>restless</strong> or <strong>on edge</strong> even when nothing is going on around you to cause these feelings?</label>
+                <select id="q3">
+                    <option value="NO">No</option>
+                    <option value="YES">Yes</option>
+                </select>
+            </div>
+        </div>
+            <p></p>
+        <div id="question4">
+            <div class="question4">
+                <label for="q4">4.)&nbsp;&nbsp;Is it hard for you to concentrate on specific tasks or do you often notice your mind just "going blank"?</label>
+                <select id="q4">
+                    <option value="NO">No</option>
+                    <option value="YES">Yes</option>
+                </select>
+            </div>
+        </div>
+            <p></p>
+        <div id="question5">
+            <div class="question5">
+                <label for="q5">5.)&nbsp;&nbsp;Do you often feel <strong>irritable</strong> or <strong>tense</strong> even when nothing is going on which would justify this feeling?</label>
+                <select id="q5">
+                    <option value="NO">No</option>
+                    <option value="YES">Yes</option>
+                </select>
+            </div>
+        </div>
+            <p></p>
+        <div id="question6">
+            <div class="question6">
+                <label for="q6">6.)&nbsp;&nbsp;Is it difficult for you to fall asleep due to too many thoughts in your head?</label>
+                <select id="q6">
+                    <option value="NO">No</option>
+                    <option value="YES">Yes</option>
+                </select>
+            </div>
+            <p></p>
+        </div>
+        <div id="question7">
+            <div class="question7">
+                <label for="q7">7.)&nbsp;&nbsp;Do you notice your muscles getting tense frequently or feel tension in the muscles of your lower back, neck, or eyes?</label>
+                <select id="q7">
+                    <option value="NO">No</option>
+                    <option value="YES">Yes</option>
+                </select>
+            </div>
+            <p></p>
+        </div>
+        <div id="question8">
+            <div class="question8">
+                <label for="q8">8.)&nbsp;&nbsp;Do you find it difficult to sit still without having to fiddle with something, doodle, or make other repetitious movements?</label>
+                <select id="q8">
+                    <option value="NO">No</option>
+                    <option value="YES">Yes</option>
+                </select>
+            </div>
+        </div>
+             <p></p>
+        <div id="question9">
+            <div class="question9">
+                <label for="q9">9.)&nbsp;&nbsp;Have you noticed periods during the day when you have symptoms such as <strong>heart palpatations, sweaty plans,</strong> or <strong>shallow breathing</strong>?</label>
+                <select id="q9">
+                    <option value="NO">No</option>
+                    <option value="YES">Yes</option>
+                </select>
+            </div>
+        </div>
+             <p></p>
+       <div id="question10">
+            <div class="question10">
+                <label for="q10">10.)&nbsp;&nbsp;Do friends or family members tell you that you are too high strung, worry too much about little things, or need to "chill"?</label>
+                <select id="q10">
+                    <option value="NO">No</option>
+                    <option value="YES">Yes</option>
+                </select>
+            </div>
+        </div>
+            
+        <p></p>
+        <div class="submitButton">
+            <label for="submitButton"></label>
+            <input type="submit" value="Submit and Score Test">
+        </div>
+        </form>
+        
+        <script type="text/javascript">
+            
+             
+            document.getElementById('questionForm').addEventListener('submit', estimateTotal);
+            
+            function estimateTotal(event){
+                event.preventDefault();
+                console.log("submit button works, and prints the points to the console")
+            
+            
+				var ques1 = document.getElementById('q1').value,
+					ques2 = document.getElementById('q2').value,
+					ques3 = document.getElementById('q3').value,
+					ques4 = document.getElementById('q4').value,
+					ques5 = document.getElementById('q5').value,
+					ques6 = document.getElementById('q6').value,
+					ques7 = document.getElementById('q7').value,
+					ques8 = document.getElementById('q8').value,
+					ques9 = document.getElementById('q9').value,
+					ques10 = document.getElementById('q10').value;
+     		
+                var points = 0;
+                if(ques1 === "YES"){points++;}
+                if(ques2 === "YES"){points++;}
+                if(ques3 === "YES"){points++;}
+                if(ques4 === "YES"){points++;}
+                if(ques5 === "YES"){points++;}
+                if(ques6 === "YES"){points++;}
+                if(ques7 === "YES"){points++;}
+                if(ques8 === "YES"){points++;}
+                if(ques9 === "YES"){points++;}
+                if(ques10 === "YES"){points++;}
+                console.log(points);
+            }
+        </script>
+        
+    </body>
+</html>
