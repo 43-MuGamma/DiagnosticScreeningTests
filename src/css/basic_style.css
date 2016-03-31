@@ -1,0 +1,23 @@
+body{
+    background-color:black;
+}
+h1{
+    text-align: center;
+    font-family:"Times Ne Roman", serif;
+    font-size: 2em;
+    font-weight:bold;
+    font-style:normal;
+    background-color:#9999ff;
+    color:white;
+    height: 50px;
+}
+div{
+    font-family:sans-serif;
+    color:white;
+    height:40px;
+    border-bottom: ridge 1px;  
+}
+
+.submitButton{
+    border-style:none;
+}
