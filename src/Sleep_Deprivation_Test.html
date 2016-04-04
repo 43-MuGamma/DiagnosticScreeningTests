@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang = "eng">
+	<head>
+	<meta charset = "utf-8">
+	<meta name="description" content="Sleep Deprivation Screening Test">
+        <title>Sleep Deprivation Diagnostic Screening Test</title>
+        <link rel="stylesheet" type="text/css" href="basic_style.css">
+    </head>
+    <body>
+    <h1>Sleep Deprivation Screening Test</h1>
+
+    <form id="questionForm">  
+        <div id="question1">
+            <div class="question1">
+                <label for="q1">1.)&nbsp;&nbsp; Do you find you have difficulty staying focused or alert?</label>
+                <select id="q1">
+                    <option value="NO">No</option>
+                    <option value="YES">Yes</option>
+                </select>
+            </div>
+        </div>
+		<p></p>
+        <div id="question2">
+            <div class="question2">
+                <label for="q2">2.)&nbsp;&nbsp; Do you struggle to stay awake during the day?</label>
+                <select id="q2">
+                    <option value="NO">No</option>
+                    <option value="YES">Yes</option>
+                </select>
+            </div>
+        </div>
+        <p></p>
+        <div id="question3">
+            <div class="question3">
+                <label for="q3">3.)&nbsp;&nbsp; Do you sleep less than 6 hours on most nights?</label>
+                <select id="q3">
+                    <option value="NO">No</option>
+                    <option value="YES">Yes</option>
+                </select>
+            </div>
+        </div>
+        <p></p>
+        <div id="question4">
+            <div class="question4">
+                <label for="q4">4.)&nbsp;&nbsp; Have you noticed yourself gaining weight?</label>
+                <select id="q4">
+                    <option value="NO">No</option>
+                    <option value="YES">Yes</option>
+                </select>
+            </div>
+        </div>
+		<p></p>
+        <div id="question5">
+            <div class="question5">
+                <label for="q5">5.)&nbsp;&nbsp; Do you ever feel light-headed after standing or performing a physical activity?</label>
+                <select id="q5">
+                    <option value="NO">No</option>
+                    <option value="YES">Yes</option>
+                </select>
+            </div>
+        </div>
+        <p></p>
+        <div id="question6">
+            <div class="question6">
+                <label for="q6">6.)&nbsp;&nbsp; Do you suffer from High Blood Pressure?</label>
+                <select id="q6">
+                    <option value="NO">No</option>
+                    <option value="YES">Yes</option>
+                </select>
+            </div>
+        </div>
+        <p></p>
+        <div id="question7">
+            <div class="question7">
+                <label for="q7">7.)&nbsp;&nbsp; have you have noticable priorbital puffiness, also known as "bags under the eyes"?</label>
+                <select id="q7">
+                    <option value="NO">No</option>
+                    <option value="YES">Yes</option>
+                </select>
+            </div>
+        </div>
+        <p></p>
+        <div id="question8">
+            <div class="question8">
+                <label for="q8">8.)&nbsp;&nbsp;Are you often irritable, easily annoyed or short-tempered? </label>
+                <select id="q8">
+                    <option value="NO">No</option>
+                    <option value="YES">Yes</option>
+                </select>
+            </div>
+        </div>
+        <p></p>
+        <div id="question9">
+            <div class="question9">
+                <label for="q9">9.)&nbsp;&nbsp; Do you suffer from Nystagmus, characterized by rapid and involuntary movement of the eyes? </label>
+                <select id="q9">
+                    <option value="NO">No</option>
+                    <option value="YES">Yes</option>
+                </select>
+            </div>
+        </div>
+        <p></p>
+        <div id="question10">
+            <div class="question10">
+                <label for="q10">10.)&nbsp;&nbsp;Do you suffer from a general weariness or malaise throughout your day? </label>
+                <select id="q10">
+                    <option value="NO">No</option>
+                    <option value="YES">Yes</option>
+                </select>
+            </div>
+        </div>
+        <p></p>
+        <div id="question11">
+            <div class="question11">
+                <label for="q11">11.)&nbsp;&nbsp;Do you suffer from dramatic mood swings resulting in mania or depression? </label>
+                <select id="q11">
+                    <option value="NO">No</option>
+                    <option value="YES">Yes</option>
+                </select>
+            </div>
+        </div>
+        <p></p>
+        <div id="question12">
+            <div class="question12">
+                <label for="q12">12.)&nbsp;&nbsp; Do you suffer from frequent headaches?</label>
+                <select id="q12">
+                    <option value="NO">No</option>
+                    <option value="YES">Yes</option>
+                </select>
+            </div>
+        </div>
+        <p></p>
+        <div id="question13">
+            <div class="question13">
+                <label for="q13">13.)&nbsp;&nbsp; Do you suffer from involuntary hand tremors?</label>
+                <select id="q13">
+                    <option value="NO">No</option>
+                    <option value="YES">Yes</option>
+                </select>
+            </div>
+        </div>
+        
+        <p></p>
+        <div class="submitButton">
+            <label for="submitButton"></label>
+            <input type="submit" value="Submit and Score Test">
+        </div>
+        </form>
+        
+        <script type="text/javascript">
+            
+             
+            document.getElementById('questionForm').addEventListener('submit', estimateTotal);
+            
+            function estimateTotal(event){
+                event.preventDefault();
+                console.log("submit button works, and prints the points to the console")
+            
+            
+				var ques1 = document.getElementById('q1').value,
+					ques2 = document.getElementById('q2').value,
+					ques3 = document.getElementById('q3').value,
+					ques4 = document.getElementById('q4').value,
+					ques5 = document.getElementById('q5').value,
+					ques6 = document.getElementById('q6').value,
+					ques7 = document.getElementById('q7').value,
+					ques8 = document.getElementById('q8').value,
+					ques9 = document.getElementById('q9').value,
+					ques10 = document.getElementById('q10').value,
+                    ques11 = document.getElementById('q11').value,
+                    ques12 = document.getElementById('q12').value,
+                    ques13 = document.getElementById('q13').value;
+     		
+                var points = 0;
+                if(ques1 === "YES"){points++;}
+                if(ques2 === "YES"){points++;}
+                if(ques3 === "YES"){points++;}
+                if(ques4 === "YES"){points++;}
+                if(ques5 === "YES"){points++;}
+                if(ques6 === "YES"){points++;}
+                if(ques7 === "YES"){points++;}
+                if(ques8 === "YES"){points++;}
+                if(ques9 === "YES"){points++;}
+                if(ques10 === "YES"){points++;}
+                if(ques11 === "YES"){points++;}
+                if(ques12 === "YES"){points++;}
+                if(ques13 === "YES"){points++;}
+                console.log(points);
+            }
+        </script>
+        
+    </body>
+</html>
