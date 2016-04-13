@@ -1,5 +1,5 @@
 body{
- 
+  font-family:sans-serif;
 }
 h1{
   text-align: center;
@@ -17,14 +17,19 @@ h1{
   padding:10px;
 }
 
-div{
-  font-family:sans-serif;
+#question{
   height:40px;
+  padding-top:10px;
   border-bottom: ridge 2px;  
 }
 
-.options {
-  margin-left:90%;
+#questionText {
+  width:80%;
+  float:left;
+}
+
+#options {
+  float:right;
 }
 
 .submitButton{
