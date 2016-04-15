@@ -1,316 +1,377 @@
 <!doctype html>
 <html lang = "eng">
-    <head>
-        <meta charset="utf-8">
-        <meta name="description" content="A Port of the Depression Diagnostic Screening Test">
-        <link rel="stylesheet" type="text/css" href="css/basic_style.css">
-        <title>Depression Diagnostic Streaming Test</title>
-    </head>
-    <body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="A Port of the Depression Diagnostic Screening Test">
+    <link rel="stylesheet" type="text/css" href="css/basic_style.css">
+    <title>Depression Diagnostic Streaming Test</title>
+  </head>
+  <body>
     <h1>Depression Screening Test</h1>
 
-    <form id="questionForm">  
-        <div id="question1">
-            <div class="styled-question">
-                <label for="q1">1.)&nbsp;&nbsp; Have you ever felt tearful for a majority of the day for at least the last to weeks?</label>
-                <select id="q1">
-                    <option value="0">Never</option>
-                    <option value="1">Sometimes</option>
-                    <option value="2">Often</option>
-                    <option value="3">Always</option>
-                </select>
+    <form id="questionForm">
+      <div id="question">
+        <div class="question1">
+          <div id="questionText">
+            <label for="q1">1.)&nbsp;&nbsp; Have you ever felt tearful for a majority of the day for at least the last to weeks?</label>
+          </div>
+          <div id="options">
+            <select id="q1">
+              <option value="0">Never</option>
+              <option value="1">Sometimes</option>
+              <option value="2">Often</option>
+              <option value="3">Always</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div id="question">
+        <div class="question2">
+          <div id="questionText">
+            <label for="q2">2.)&nbsp;&nbsp;Have you lost interest in activities that you used to enjoy?</label>
+          </div>
+          <div id="options">
+            <select id="q2">
+              <option value="0">Never</option>
+              <option value="1">Sometimes</option>
+              <option value="2">Often</option>
+              <option value="3">Always</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div id="question">
+        <div class="question3">
+          <div id="questionText">
+            <label for="q3">3.)&nbsp;&nbsp;Is it difficult for you to fall asleep at night to the point that you do not get adequate sleep and are tired the next day?</label>
+          </div>
+          <div id="options">
+            <select id="q3">
+              <option value="0">Never</option>
+              <option value="1">Sometimes</option>
+              <option value="2">Often</option>
+              <option value="3">Always</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div id="question">
+        <div class="question4">
+          <div id="questionText">
+            <label for="q4">4.)&nbsp;&nbsp;Do you find that you sleep a lot more than you should because of feelings of fatigue?</label>
+          </div>
+          <div id="options">
+            <select id="q4">
+              <option value="0">Never</option>
+              <option value="1">Sometimes</option>
+              <option value="2">Often</option>
+              <option value="3">Always</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div id="question">
+        <div class="question5">
+            <div id="questionText">
+          <label for="q5">5.)&nbsp;&nbsp;Have you noticed a change in your appetite that has resulted in either not feeling hungry most days or feeling the urge to eat more than usual resulting in a change in your weight?</label>
+                </div>
+        <div id="options">
+          <select id="q5">
+            <option value="0">Never</option>
+            <option value="1">Sometimes</option>
+            <option value="2">Often</option>
+            <option value="3">Always</option>
+          </select>
+        </div>
+      </div>
+      </div>
+      <br>
+      <div id="question">
+        <div class="question6">
+          <div id="questionText">
+            <label for="q6">6.)&nbsp;&nbsp;Has your energy level decreased to the point that normal daily activities seem overwhelming?</label>
+          </div>
+          <div id="options">
+            <select id="q6">
+              <option value="0">Never</option>
+              <option value="1">Sometimes</option>
+              <option value="2">Often</option>
+              <option value="3">Always</option>
+            </select>
+          </div>
+        </div>
+      </div>
+        <br>
+      </div>
+      <div id="question">
+        <div class="question7">
+          <div id="questionText">
+            <label for="q7">7.)&nbsp;&nbsp;Have you noticed that it seems more difficult to stay focused on activities or to concentrate on complicated tasks?</label>
+          </div>
+          <div id="options">
+            <select id="q7">
+                <option value="0">Never</option>
+                <option value="1">Sometimes</option>
+                <option value="2">Often</option>
+                <option value="3">Always</option>
+            </select>
             </div>
         </div>
-            <p></p>
-        <div id="question2">
-            <div class="question2">
-                <label for="q2">2.)&nbsp;&nbsp;Have you lost interest in activities that you used to enjoy?</label>
-                <select id="q2">
-                    <option value="0">Never</option>
-                    <option value="1">Sometimes</option>
-                    <option value="2">Often</option>
-                    <option value="3">Always</option>
-                </select>
-            </div>
+        <br>
+      </div>
+      <div id="question">
+        <div class="question8">
+          <div id="questionText">
+            <label for="q8">8.)&nbsp;&nbsp;Have you thought about suicide or what it would be like if you were no longer around?</label>
+          </div>
+          <div id="options">
+            <select id="q8">
+              <option value="0">Never</option>
+              <option value="1">Sometimes</option>
+              <option value="2">Often</option>
+              <option value="3">Always</option>
+            </select>
+          </div>
         </div>
-            <p></p>
-        <div id="question3">
-            <div class="question3">
-                <label for="q3">3.)&nbsp;&nbsp;Is it difficult for you to fall asleep at night to the point that you do not get adequate sleep and are tired the next day?</label>
-                <select id="q3">
-                    <option value="0">Never</option>
-                    <option value="1">Sometimes</option>
-                    <option value="2">Often</option>
-                    <option value="3">Always</option>
-                </select>
-            </div>
+      </div>
+      <br>
+      <div id="question">
+        <div class="question9">
+          <div id="questionText">
+            <label for="q9">9.)&nbsp;&nbsp;Do you find yourself getting angry easily or lashing out at people without a valid reason?</label>
+          </div>
+          <div id="options">
+            <select id="q9">
+              <option value="0">Never</option>
+              <option value="1">Sometimes</option>
+              <option value="2">Often</option>
+              <option value="3">Always</option>
+            </select>
+          </div>
         </div>
-            <p></p>
-        <div id="question4">
-            <div class="question4">
-                <label for="q4">4.)&nbsp;&nbsp;Do you find that you sleep a lot more than you should because of feelings of fatigue?</label>
-                <select id="q4">
-                  <option value="0">Never</option>
-                    <option value="1">Sometimes</option>
-                    <option value="2">Often</option>
-                    <option value="3">Always</option>
-                </select>
-            </div>
+      </div>
+      <br>
+      <div id="question">
+        <div class="question10">
+          <div id="questionText">
+            <label for="q10">10.)&nbsp;&nbsp;Do friends or family tell you that they are concerned about you because of your sadness, your sleep patterns, or your anger?</label>
+          </div>
+          <div id="options">
+            <select id="q10">
+              <option value="0">Never</option>
+              <option value="1">Sometimes</option>
+              <option value="2">Often</option>
+              <option value="3">Always</option>
+            </select>
+          </div>
         </div>
-            <p></p>
-        <div id="question5">
-            <div class="question5">
-                <label for="q5">5.)&nbsp;&nbsp;Have you noticed a change in your appetite that has resulted in either not feeling hungry most days or feeling the urge to eat more than usual resulting in a change in your weight?</label>
-                <select id="q5">
-                    <option value="0">Never</option>
-                    <option value="1">Sometimes</option>
-                    <option value="2">Often</option>
-                    <option value="3">Always</option>
-                </select>
-            </div>
+      </div>
+      <br>
+      <div id="question">
+        <div class="question11">
+          <div id="questionText">
+            <label for="q11">11.)&nbsp;&nbsp;Is it more difficult for you to make decisions, even regarding simple matters?</label>
+          </div>
+          <div id="options">
+            <select id="q11">
+              <option value="0">Never</option>
+              <option value="1">Sometimes</option>
+              <option value="2">Often</option>
+              <option value="3">Always</option>
+            </select>
+          </div>
         </div>
-            <p></p>
-        <div id="question6">
-            <div class="question6">
-                <label for="q6">6.)&nbsp;&nbsp;Has your energy level decreased to the point that normal daily activities seem overwhelming?</label>
-                <select id="q6">
-                    <option value="0">Never</option>
-                    <option value="1">Sometimes</option>
-                    <option value="2">Often</option>
-                    <option value="3">Always</option>
-                </select>
-            </div>
-            <p></p>
+      </div>
+      <br>
+      <div id="question">
+        <div class="question12">
+          <div id="questionText">
+            <label for="q12">12.)&nbsp;&nbsp;Do you cry more easily than you used to?</label>
+          </div>
+          <div id="options">
+            <select id="q12">
+              <option value="0">Never</option>
+              <option value="1">Sometimes</option>
+              <option value="2">Often</option>
+              <option value="3">Always</option>
+            </select>
+          </div>
         </div>
-        <div id="question7">
-            <div class="question7">
-                <label for="q7">7.)&nbsp;&nbsp;Have you noticed that it seems more difficult to stay focused on activities or to concentrate on complicated tasks?</label>
-                <select id="q7">
-                    <option value="0">Never</option>
-                    <option value="1">Sometimes</option>
-                    <option value="2">Often</option>
-                    <option value="3">Always</option>
-                </select>
-            </div>
-            <p></p>
+      </div>
+      <br>
+      <div id="question">
+        <div class="question13">
+          <div id="questionText">
+            <label for="q13">13.)&nbsp;&nbsp;Do you often criticize yourself about things you have done in the past or about decisions you have made?</label>
+          </div>
+          <div id="options">
+            <select id="q13">
+              <option value="0">Never</option>
+              <option value="1">Sometimes</option>
+              <option value="2">Often</option>
+              <option value="3">Always</option>
+            </select>
+          </div>
         </div>
-        <div id="question8">
-            <div class="question8">
-                <label for="q8">8.)&nbsp;&nbsp;Have you thought about suicide or what it would be like if you were no longer around?</label>
-                <select id="q8">
-                    <option value="0">Never</option>
-                    <option value="1">Sometimes</option>
-                    <option value="2">Often</option>
-                    <option value="3">Always</option>
-                </select>
-            </div>
+      </div>
+      <br>
+      <div id="question">
+        <div class="question14">
+          <div id="questionText">
+            <label for="q14">14.)&nbsp;&nbsp;Have feelings of sadness or anger, changes in your sleep pattern, or a lack of motivation and energy gotten in the way of achieving goals or performing activities?</label>
+          </div>
+          <div id="options">
+            <select id="q14">
+              <option value="0">Never</option>
+              <option value="1">Sometimes</option>
+              <option value="2">Often</option>
+              <option value="3">Always</option>
+            </select>
+          </div>
         </div>
-             <p></p>
-        <div id="question9">
-            <div class="question9">
-                <label for="q9">9.)&nbsp;&nbsp;Do you find yourself getting angry easily or lashing out at people without a valid reason?</label>
-                <select id="q9">
-                    <option value="0">Never</option>
-                    <option value="1">Sometimes</option>
-                    <option value="2">Often</option>
-                    <option value="3">Always</option>
-                </select>
-            </div>
+      </div>
+      <br>
+      <div id="question">
+        <div class="question15">
+          <div id="questionText">
+            <label for="q15">15.)&nbsp;&nbsp;Does the future ever look bleak or even hopeless to you?</label>
+          </div>
+          <div id="options">
+            <select id="q15">
+              <option value="0">Never</option>
+              <option value="1">Sometimes</option>
+              <option value="2">Often</option>
+              <option value="3">Always</option>
+            </select>
+          </div>
         </div>
-             <p></p>
-       <div id="question10">
-            <div class="question10">
-                <label for="q10">10.)&nbsp;&nbsp;Do friends or family tell you that they are concerned about you because of your sadness, your sleep patterns, or your anger?</label>
-                <select id="q10">
-                    <option value="0">Never</option>
-                    <option value="1">Sometimes</option>
-                    <option value="2">Often</option>
-                    <option value="3">Always</option>
-                </select>
-            </div>
-        </div>
-             <p></p>
-        <div id="question11">
-            <div class="question11">
-                <label for="q11">11.)&nbsp;&nbsp;Is it more difficult for you to make decisions, even regarding simple matters?</label>
-                <select id="q11">
-                    <option value="0">Never</option>
-                    <option value="1">Sometimes</option>
-                    <option value="2">Often</option>
-                    <option value="3">Always</option>
-                </select>
-            </div>
-        </div>
-             <p></p>
-        <div id="question12">
-            <div class="question12">
-                <label for="q12">12.)&nbsp;&nbsp;Do you cry more easily than you used to?</label>
-                <select id="q12">
-                    <option value="0">Never</option>
-                    <option value="1">Sometimes</option>
-                    <option value="2">Often</option>
-                    <option value="3">Always</option>
-                </select>
-            </div>
-        </div>
-             <p></p>
-        <div id="question13">
-            <div class="question13">
-                <label for="q13">13.)&nbsp;&nbsp;Do you often criticize yourself about things you have done in the past or about decisions you have made?</label>
-                <select id="q13">
-                    <option value="0">Never</option>
-                    <option value="1">Sometimes</option>
-                    <option value="2">Often</option>
-                    <option value="3">Always</option>
-                </select>
-            </div>
-        </div>
-             <p></p>
-        <div id="question14">
-            <div class="question14">
-                <label for="q14">14.)&nbsp;&nbsp;Have feelings of sadness or anger, changes in your sleep pattern, or a lack of motivation and energy gotten in the way of achieving goals or performing activities?</label>
-                <select id="q14">
-                    <option value="0">Never</option>
-                    <option value="1">Sometimes</option>
-                    <option value="2">Often</option>
-                    <option value="3">Always</option>
-                </select>
-            </div>
-        </div>
-             <p></p>
-        <div id="question15">
-            <div class="question15">
-                <label for="q15">15.)&nbsp;&nbsp;Does the future ever look bleak or even hopeless to you?</label>
-                <select id="q15">
-                    <option value="0">Never</option>
-                    <option value="1">Sometimes</option>
-                    <option value="2">Often</option>
-                    <option value="3">Always</option>
-                </select>
-            </div>
-        </div>
-            
-        <p></p>
-        <div class="submitButton">
-            <label for="submitButton"></label>
-            <input type="submit" value="Submit and Score Test">
-        </div>
-        </form>
-        
-        <script type="text/javascript">
-            "use strict";
-             
-            document.getElementById('questionForm').addEventListener('submit', estimateTotal);
-            
-            function estimateTotal(event){
-                event.preventDefault();
-                console.log("submit button works, and prints the points to the console")
-            
-            
-            var ques1 = document.getElementById('q1').value,
-                ques2 = document.getElementById('q2').value,
-                ques3 = document.getElementById('q3').value,
-                ques4 = document.getElementById('q4').value,
-                ques5 = document.getElementById('q5').value,
-                ques6 = document.getElementById('q6').value,
-                ques7 = document.getElementById('q7').value,
-                ques8 = document.getElementById('q8').value,
-                ques9 = document.getElementById('q9').value,
-                ques10 = document.getElementById('q10').value,
-                ques11 = document.getElementById('q11').value,
-                ques12 = document.getElementById('q12').value,
-                ques13 = document.getElementById('q13').value,
-                ques14 = document.getElementById('q14').value,
-                ques15 = document.getElementById('q15').value;
+      </div>
 
-                var points = 0;
-                var q1val=0;
-                var q2val=0;
-                var q3val=0;
-                var q4val=0;
-                var q5val=0;
-                var q6val=0;
-                var q7val=0;
-                var q8val=0;
-                var q9val=0;
-                var q10val=0;
-                var q11val=0;
-                var q12val=0;
-                var q13val=0;
-                var q14val=0;
-                var q15val=0;
-                
-                for(q1val=0; q1val<=3; q1val++){
-                    if(ques1 == q1val){
-                        points+=q1val;
-                    }
-                }
-                for(q2val=0;q2val<=3;q2val++){
-                    if(ques2 == q2val){
-                        points+=q2val;
-                    }
-                }
-                for(q3val=0;q3val<=3;q3val++){
-                    if(ques3 == q3val){
-                        points+=q3val;   
-                    }
-                }
-                for(q4val=0;q4val<=3;q4val++){
-                    if(ques4 == q4val){
-                        points+=q4val;
-                    }
-                }
-                for(q5val=0;q5val<=3;q5val++){
-                    if(ques5 == q5val){points+=q5val;}
-                }
-                for(q6val=0;q6val<=3;q6val++){
-                    if(ques6 == q6val){points+=q6val;}
-                }
-                for(q7val=0;q7val<=3;q7val++){
-                    if(ques7 == q7val){
-                        points+=q7val;
-                    }
-                }
-                for(q8val=0;q8val<=3;q8val++){
-                    if(ques8 == q8val){
-                        points+=q8val;
-                    }
-                }
-                for(q9val=0;q9val<=3;q9val++){
-                    if(ques9 == q9val){
-                        points+=q9val;
-                        }
-                }
-                for(q10val=0;q10val<=3;q10val++){
-                    if(ques10 == q10val){
-                        points+=q10val;
-                    }
-                }
-                for(q11val=0;q11val<=3;q11val++){
-                    if(ques11 == q11val){
-                        points+=q11val;
-                    }
-                }
-                for(q12val=0;q12val<=3;q12val++){
-                    if(ques12 == q12val){points+=q12val;}
-                }
-                for(q13val=0;q13val<=3;q13val++){
-                    if(ques13 == q13val){points+=q13val;}
-                }
-                for(q14val=0;q14val<=3;q14val++){
-                    if(ques14 == q14val){points+=q14val;}
-                }
-                for(q15val=0;q15val<=3;q15val++){
-                    if(ques15 == q15val){points+=q15val;}
-                }
-            
-                if(points < 3){ window.alert("Your score : "+points+"\n\nNo Depression \n \n You are more lucky than most or have developed a positive attitude toward life and an effective means of warding off depressive symptomatology.\n\n")}
-                else if(points >= 3 && points <=12 ){window.alert("Your score : "+points+"\n\nMild Depression\n\n Some of the items you responded to are symptoms of major depression, but you do not meet the diagnostic criteria for this disorder. However, these can be serious symptoms, especially if feelings of hopelessness or thoughts of suicide are predominant for you. If this is the case, you should seek out assistance, either through a licensed professional or through a close friend or family member whom you feel you can trust.  It is likely that you have a specific concern that you should look at.\n\n")}
-                else if(points >=12 && points <=27){window.alert("Your score : "+points+"\n\nModerate Depression (15-27)\n\nYou have endorsed some symptoms of major depression and have most likely noticed that you are not feeling as well as you have in the past and that these feelings are starting to play a role in your daily activities.  You may want to consider seeing a professional about your symptoms, if nothing more than to get a more accurate impression of how these symptoms are affecting your life.\n\n")}
-                else{window.alert("Your score : "+points+"\n\nMajor Depression (10-15)\n\nYou have endorsed many of the symptoms commonly seen in people who suffer from major depression.  You should be concerned about these symptoms and it is likely that close friends and family members are also concerned.  It is highly recommended that you consider seeing a psychiatrist or psychologist for an evaluation.  Depression is a serious disorder but is highly treatable.\n\n")}
-                
-            }
-        </script>
-        
-    </body>
+      <br>
+      <div class="submitButton">
+        <label for="submitButton"></label>
+        <input type="submit" value="Submit and Score Test">
+      </div>
+    </form>
+
+    <script type="text/javascript">
+"use strict";
+
+document.getElementById('questionForm').addEventListener('submit', estimateTotal);
+
+function estimateTotal(event){
+  event.preventDefault();
+  console.log("submit button works, and prints the points to the console")
+
+
+    var ques1 = document.getElementById('q1').value,
+  ques2 = document.getElementById('q2').value,
+  ques3 = document.getElementById('q3').value,
+  ques4 = document.getElementById('q4').value,
+  ques5 = document.getElementById('q5').value,
+  ques6 = document.getElementById('q6').value,
+  ques7 = document.getElementById('q7').value,
+  ques8 = document.getElementById('q8').value,
+  ques9 = document.getElementById('q9').value,
+  ques10 = document.getElementById('q10').value,
+  ques11 = document.getElementById('q11').value,
+  ques12 = document.getElementById('q12').value,
+  ques13 = document.getElementById('q13').value,
+  ques14 = document.getElementById('q14').value,
+  ques15 = document.getElementById('q15').value;
+
+  var points = 0;
+  var q1val=0;
+  var q2val=0;
+  var q3val=0;
+  var q4val=0;
+  var q5val=0;
+  var q6val=0;
+  var q7val=0;
+  var q8val=0;
+  var q9val=0;
+  var q10val=0;
+  var q11val=0;
+  var q12val=0;
+  var q13val=0;
+  var q14val=0;
+  var q15val=0;
+
+  for(q1val=0; q1val<=3; q1val++){
+    if(ques1 == q1val){
+      points+=q1val;
+    }
+  }
+  for(q2val=0;q2val<=3;q2val++){
+    if(ques2 == q2val){
+      points+=q2val;
+    }
+  }
+  for(q3val=0;q3val<=3;q3val++){
+    if(ques3 == q3val){
+      points+=q3val;   
+    }
+  }
+  for(q4val=0;q4val<=3;q4val++){
+    if(ques4 == q4val){
+      points+=q4val;
+    }
+  }
+  for(q5val=0;q5val<=3;q5val++){
+    if(ques5 == q5val){points+=q5val;}
+  }
+  for(q6val=0;q6val<=3;q6val++){
+    if(ques6 == q6val){points+=q6val;}
+  }
+  for(q7val=0;q7val<=3;q7val++){
+    if(ques7 == q7val){
+      points+=q7val;
+    }
+  }
+  for(q8val=0;q8val<=3;q8val++){
+    if(ques8 == q8val){
+      points+=q8val;
+    }
+  }
+  for(q9val=0;q9val<=3;q9val++){
+    if(ques9 == q9val){
+      points+=q9val;
+    }
+  }
+  for(q10val=0;q10val<=3;q10val++){
+    if(ques10 == q10val){
+      points+=q10val;
+    }
+  }
+  for(q11val=0;q11val<=3;q11val++){
+    if(ques11 == q11val){
+      points+=q11val;
+    }
+  }
+  for(q12val=0;q12val<=3;q12val++){
+    if(ques12 == q12val){points+=q12val;}
+  }
+  for(q13val=0;q13val<=3;q13val++){
+    if(ques13 == q13val){points+=q13val;}
+  }
+  for(q14val=0;q14val<=3;q14val++){
+    if(ques14 == q14val){points+=q14val;}
+  }
+  for(q15val=0;q15val<=3;q15val++){
+    if(ques15 == q15val){points+=q15val;}
+  }
+
+  if(points < 3){ window.alert("Your score : "+points+"\n\nNo Depression \n \n You are more lucky than most or have developed a positive attitude toward life and an effective means of warding off depressive symptomatology.\n\n")}
+  else if(points >= 3 && points <=12 ){window.alert("Your score : "+points+"\n\nMild Depression\n\n Some of the items you responded to are symptoms of major depression, but you do not meet the diagnostic criteria for this disorder. However, these can be serious symptoms, especially if feelings of hopelessness or thoughts of suicide are predominant for you. If this is the case, you should seek out assistance, either through a licensed professional or through a close friend or family member whom you feel you can trust.  It is likely that you have a specific concern that you should look at.\n\n")}
+  else if(points >=12 && points <=27){window.alert("Your score : "+points+"\n\nModerate Depression (15-27)\n\nYou have endorsed some symptoms of major depression and have most likely noticed that you are not feeling as well as you have in the past and that these feelings are starting to play a role in your daily activities.  You may want to consider seeing a professional about your symptoms, if nothing more than to get a more accurate impression of how these symptoms are affecting your life.\n\n")}
+  else{window.alert("Your score : "+points+"\n\nMajor Depression (10-15)\n\nYou have endorsed many of the symptoms commonly seen in people who suffer from major depression.  You should be concerned about these symptoms and it is likely that close friends and family members are also concerned.  It is highly recommended that you consider seeing a psychiatrist or psychologist for an evaluation.  Depression is a serious disorder but is highly treatable.\n\n")}
+
+}
+    </script>
+
+  </body>
 </html>
