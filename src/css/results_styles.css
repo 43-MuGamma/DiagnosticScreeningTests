@@ -1,0 +1,15 @@
+h1 {
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: lighter;
+  font-size: 3em;
+  padding-bottom: 30px;
+  padding-top:30px;
+}
+
+#results {
+  text-align: center;
+  font-family: sans-serif;
+  margin-left: 20%;
+  margin-right: 20%;
+}

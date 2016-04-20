@@ -332,15 +332,7 @@
       */
       console.log(points);
 
-      if (points === 0) {
-        window.alert("Your Score : " + points + "\n\nNo Sleep Deprivation\n\n You do not exhibit any of the signs of Sleep Deprivation.\n\n")
-      } else if (points >= 1 && points <= 9) {
-        window.alert("Your Score : " + points + "\n\nMild Sleep Deprivation\n\nBased on your answers, it is possible that you are suffering from sleep deprivation. Remember, it's important to get at least 6 to 8 hours of sleep a night")
-      } else if (points > 9 && points <= 18) {
-        window.alert("Your Score : " + points + "\n\nModerate Sleep Deprivation. Based on your answers you are suffering from moderate Sleep Deprivation. If it continues long enough, sleep deprivation can lower your body's defenses, putting you at risk of developing chronic illness. Remember, its recommended that you get at least 6 to 8 hours of sleep a night")
-      } else {
-        window.alert("Your Score : " + points + "\n\nMajor Sleep Deprivation\n\nBased on your answers you are suffering from Major Sleep Deprivation. If it continues long enough, it can lower your body's defenses, putting you at risk of developing chronic illness. It is important that catch up of sleep and that you try to get at least 8 hours of sleep a night moving forward, and consider making an appointment with your local physician.")
-      }
+      window.open("http://health3238.eastus.cloudapp.azure.com/results.html?points=" + points + "&from=sleep", "_self");
     }
   </script>
 
