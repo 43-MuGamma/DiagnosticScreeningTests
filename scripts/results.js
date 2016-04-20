@@ -1,0 +1,52 @@
+function getParameterByName(name, url) {
+  "use strict";
+  if (!url) {
+    url = window.location.href;
+  }
+  name = name.replace(/[\[\]]/g, "\\$&");
+  var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)", "i"),
+    results = regex.exec(url);
+  if (!results) {
+    return null;
+  }
+  if (!results[2]) {
+    return '';
+  }
+  return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+var points = parseInt(getParameterByName("points"), 10);
+var from = getParameterByName("from");
+
+
+switch (from) {
+case "depression":
+  if (points < 3) {
+    document.getElementById("results").innerHTML = "\n\nNo Depression \n \n You are more lucky than most or have developed a positive attitude toward life and an effective means of warding off depressive symptomatology.\n\n";
+  } else if (points >= 3 && points <= 12) {
+    document.getElementById("results").innerHTML = "\n\nMild Depression\n\n Some of the items you responded to are symptoms of major depression, but you do not meet the diagnostic criteria for this disorder. However, these can be serious symptoms, especially if feelings of hopelessness or thoughts of suicide are predominant for you. If this is the case, you should seek out assistance, either through a licensed professional or through a close friend or family member whom you feel you can trust.  It is likely that you have a specific concern that you should look at.\n\n";
+  } else if (points > 12) {
+    document.getElementById("results").innerHTML = "\n\nMild Depression\n\n Some of the items you responded to are symptoms of major depression, but you do not meet the diagnostic criteria for this disorder. However, these can be serious symptoms, especially if feelings of hopelessness or thoughts of suicide are predominant for you. If this is the case, you should seek out assistance, either through a licensed professional or through a close friend or family member whom you feel you can trust.  It is likely that you have a specific concern that you should look at.\n\n";
+  }
+  break;
+case "anxiety":
+  if (points === 0) {
+    document.getElementById("results").innerHTML = "No Anxiety\n\nYou are more lucky than most and have been successful in warding off the symptoms of anxiety. Keep doing what you are doing and if you find anxiety or stress creeping up on you, recognize it and nip it in the bud.";
+  } else if (points >= 1 && points <= 5) {
+    document.getElementById("results").innerHTML = "Some of the items you responded to are potential symptoms of anxiety. While you did not score high enough to be reliably diagnosed with anxiety, be sure you pay attention to your habits to detect possible anxiety in the future. \n\n";
+  } else if (points > 5 && points <= 20) {
+    document.getElementById("results").innerHTML = "Moderate Anxiety (5-20)\n\nSome of the items you responded to are symptoms of generalized anxiety disorder and other disorders in this category. Your general symptoms may be mild, but it might be wise to look into those items which you endorsed to determine if they are resulting in difficulties in your life.\n\n";
+  } else {
+    document.getElementById("results").innerHTML = "Major Anxiety (20-30)\n\nYou have endorsed many of the symptoms commonly seen in people who suffer from generalized anxiety disorder and other disorders in this category. You worry excessively, feel out of control at times, and fear that things will go wrong even without information to support this. If anxiety is causing you distress or getting in the way of achieving your goals, recommendations would include looking into therapy, medication, or a group.";
+  }
+  break;
+case "intro_extro":
+  if (points > 0) {
+    document.getElementById("results").innerHTML = "You are and Introvert\n\nIntroverts are people who are enerigized by spending time alone. They prefer to spend time with a small group of friends than with a large party of people.";
+  } else if (points < 0) {
+    document.getElementById("results").innerHTML = "You are an Extrovert\n\nExtroverts are outgoing and expressive, preferring the company of others to solitude. Extroverts are energized by spending time in public and with other people";
+  } else if (points === 0) {
+    document.getElementById("results").innerHTML = "You are an Ambivert\n\n";
+  }
+  break;
+}

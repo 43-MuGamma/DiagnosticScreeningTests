@@ -259,15 +259,7 @@
        */
       console.log(points);
 
-      if (points === 0) {
-        window.alert("Your Score : " + points + "\n\nNo Anxiety\n\nYou are more lucky than most and have been successful in warding off the symptoms of anxiety. Keep doing what you are doing and if you find anxiety or stress creeping up on you, recognize it and nip it in the bud.")
-      } else if (points >= 1 && points <= 5) {
-        window.alert("Your Score : " + points + "\n\nMild Anxiety (1-5)\n\nSome of the items you responded to are potential symptoms of anxiety. While you did not score high enough to be reliably diagnosed with anxiety, be sure you pay attention to your habits to detect possible anxiety in the future. \n\n")
-      } else if (points > 5 && points <= 20) {
-        window.alert("Your Score : " + points + "\n\nModerate Anxiety (5-20)\n\nSome of the items you responded to are symptoms of generalized anxiety disorder and other disorders in this category. Your general symptoms may be mild, but it might be wise to look into those items which you endorsed to determine if they are resulting in difficulties in your life.\n\n")
-      } else {
-        window.alert("Your Score : " + points + "\n\nMajor Anxiety (20-30)\n\nYou have endorsed many of the symptoms commonly seen in people who suffer from generalized anxiety disorder and other disorders in this category. You worry excessively, feel out of control at times, and fear that things will go wrong even without information to support this. If anxiety is causing you distress or getting in the way of achieving your goals, recommendations would include looking into therapy, medication, or a group.")
-      }
+      window.open("file:///Users/jimmyklein/Documents/Schoolwork/3238/Project/website/src/results.html?points=" + points + "&from=anxiety", "_self");
     }
   </script>
 
