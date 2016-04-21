@@ -26,7 +26,7 @@ case "depression":
   } else if (points >= 3 && points <= 12) {
     document.getElementById("results").innerHTML = "\n\nMild Depression\n\n Some of the items you responded to are symptoms of major depression, but you do not meet the diagnostic criteria for this disorder. However, these can be serious symptoms, especially if feelings of hopelessness or thoughts of suicide are predominant for you. If this is the case, you should seek out assistance, either through a licensed professional or through a close friend or family member whom you feel you can trust.  It is likely that you have a specific concern that you should look at.\n\n";
   } else if (points > 12) {
-    document.getElementById("results").innerHTML = "\n\nMild Depression\n\n Some of the items you responded to are symptoms of major depression, but you do not meet the diagnostic criteria for this disorder. However, these can be serious symptoms, especially if feelings of hopelessness or thoughts of suicide are predominant for you. If this is the case, you should seek out assistance, either through a licensed professional or through a close friend or family member whom you feel you can trust.  It is likely that you have a specific concern that you should look at.\n\n";
+    document.getElementById("results").innerHTML = "\n\nMajor Depression (10-15)\n\nYou have endorsed many of the symptoms commonly seen in people who suffer from major depression.  You should be concerned about these symptoms and it is likely that close friends and family members are also concerned.  It is highly recommended that you consider seeing a psychiatrist or psychologist for an evaluation.  Depression is a serious disorder but is highly treatable.\n\n";
   }
   break;
 case "anxiety":
