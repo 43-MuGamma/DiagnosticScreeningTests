@@ -61,4 +61,18 @@ case "sleep":
   }
   break;
 
+case "malnutrition":
+  if (points <= 2) {
+     document.getElementById("results").innerHTML = "Based on your score it is unlikely that you are suffering from Malnutrition.\n\n";
+  } else if (points > 2 && points <= 3) {
+     document.getElementById("results").innerHTML = "Based on this score it is possible that you are suffering from Malnourishment.\n\n";
+  } else if (point > 3 points <= 15) {
+     document.getElementById("results").innerHTML = "It is likely that you are suffering from Malnutrition.\n Take a close look at what your symptoms specify you are deficient in.\n\n";
+  } else if (points > 15 && points <= 25) {
+     document.getElementById("results").innerHTML = "You are suffering from many of the symptoms of Malnourishment.\n Take a close look at what your symptoms specify you are deficient in and consider consulting a Physician.\n\n";      
+  } else {
+     document.getElementById("results").innerHTML = "You are suffering from extreme Malnourishment.\n make a note of what your symptoms specify that you are deficient in and make an appointment to visit a physician for assistance as soon as possible.\n\n";
+  }
+  break;
+
 }

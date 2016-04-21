@@ -26,7 +26,61 @@ case "depression":
   } else if (points >= 3 && points <= 12) {
     document.getElementById("results").innerHTML = "\n\nMild Depression\n\n Some of the items you responded to are symptoms of major depression, but you do not meet the diagnostic criteria for this disorder. However, these can be serious symptoms, especially if feelings of hopelessness or thoughts of suicide are predominant for you. If this is the case, you should seek out assistance, either through a licensed professional or through a close friend or family member whom you feel you can trust.  It is likely that you have a specific concern that you should look at.\n\n";
   } else if (points > 12) {
-    document.getElementById("results").innerHTML = "\n\nMild Depression\n\n Some of the items you responded to are symptoms of major depression, but you do not meet the diagnostic criteria for this disorder. However, these can be serious symptoms, especially if feelings of hopelessness or thoughts of suicide are predominant for you. If this is the case, you should seek out assistance, either through a licensed professional or through a close friend or family member whom you feel you can trust.  It is likely that you have a specific concern that you should look at.\n\n";
+    document.getElementById("results").innerHTML = "\n\nMajor Depression\n\n You have endorsed many of the symptoms commonly seen in people\n who suffer from major depression. You should be concerned about these symptons and it is likely that close friends and family members are also concerned. It is highly recommended that you consider seeing a\n psychiatrist or psychologist for an evaluation. Depression is a serious disorder but is highly treatable.\n\n";    
+    //Generic Google API Geolocation algorithm w/ Places Library location snippets
+	function initMap() {
+		  var map = new google.maps.Map(document.getElementById('map'), {
+			      center: {lat: -34.397, lng: 150.644},
+			      zoom: 6
+		  });
+		  var infoWindow = new google.maps.InfoWindow({map: map});
+
+		  // HTML5 geolocation.
+		  if (navigator.geolocation) {
+		     	navigator.geolocation.getCurrentPosition(function(position) {
+		      		var pos = {
+		    	 	        lat: position.coords.latitude,
+  	                          	lng: position.coords.longitude
+		      	   	};
+		      
+		           	infoWindow.setPosition(pos);
+		      	   	infoWindow.setContent('Location found.');
+		      	   	map.setCenter(pos);
+				
+				//Modified Places Library API algorithm
+		  		var request = {
+					location: pos,
+    					radius: '500',
+    					query: "'depression', 'therapy'"
+  	          		};
+		  
+  	          		service = new google.maps.places.PlacesService(map);
+  		  		service.textSearch(request, callback);
+			
+		  		function callback(results, status) {
+  		  			if (status == google.maps.places.PlacesServiceStatus.OK) {
+    						for (var i = 0; i < results.length; i++) {
+      							var place = results[i];
+      							createMarker(results[i]);
+    						}
+  					}                                                     
+		  		}
+
+		    	}, 
+			function() {
+		           	handleLocationError(true, infoWindow, map.getCenter());
+		        });
+    		  } else {// Browser doesn't support Geolocation
+		           handleLocationError(false, infoWindow, map.getCenter());
+		  }
+	}
+	
+	function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+		infoWindow.setPosition(pos);
+		infoWindow.setContent(browserHasGeolocation ?
+			'Error: The Geolocation service failed.' :
+			'Error: Your browser doesn\'t support 		  geolocation.');
+	}	
   }
   break;
 case "anxiety":
@@ -49,4 +103,17 @@ case "intro_extro":
     document.getElementById("results").innerHTML = "You are an Ambivert\n\n";
   }
   break;
-}
+case "malnutrition":
+  if (points <= 2) {
+    document.getElementById("results").innerHTML = "Based on your score it is unlikely that you are suffering from Malnutrition\n\n";
+  } else if (points > 2 && points <= 3) {
+    document.getElementById("results").innerHTML = "Based on this score it is possible that you are suffering from Malnourishment.\n\n";
+  } else if (points > 3 && points <= 15) {
+    document.getElementById("results").innerHTML = "It is likely that you are suffering from Malnutrition.\n Take a close look at what your symptoms specify you are deficient in.\n\n";
+  } else if (points > 15 && points <= 25) {
+    document.getElementById("results").innerHTML = "You are suffering from many of the symptoms of Malnourishment.\n Take a close look at what your symptoms specify you are deficient in and consider consulting a Physician.\n\n";      
+  } else {
+    document.getElementById("results").innerHTML = "You are suffering from extreme Malnourishment.\n make a note of what your symptoms specify that you are deficient in and make an appointment to visit a physician for assistance as soon as possible.\n\n";      
+  }
+  break;
+ }
