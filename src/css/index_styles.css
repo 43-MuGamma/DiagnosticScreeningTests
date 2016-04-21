@@ -1,22 +1,32 @@
 h1 {
   font-weight:lighter;
-  font-size: 3em;
+  font-size: 4em;
 }
 
 html, body{
   height:100%;
+  background-color: #FeFeFe;
 }
 
 #titletext {
   text-align: center;
   font-family: sans-serif;
   padding-top:50px;
-  padding-bottom: 50px;
-  background-color: #A8E9FF;
+  padding-bottom: 30px;
+  background-color: #ccffff;
   margin-left:10%;
   margin-right:10%;
   border: solid 1px;
   border-color: #404040;
+}
+
+.description {
+  padding-bottom: 20px;
+  font-size: 0.8em;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 100px;
+  margin-top: 0;
 }
 
 #testlinks {
@@ -24,12 +34,12 @@ html, body{
   font-size:1.5em;
   font-weight: lighter;
   text-align: center;
-  padding-top:100px;
   height:60%;
   margin-left:10%;
   margin-right:10%;
-  background-color:#F0F0F0;
-  border: solid 1px;
+  border-left: solid 1px;
+  border-right: solid 1px;
+  border-bottom: solid 1px;
   border-color: #404040;
 }
 
