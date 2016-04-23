@@ -1,3 +1,34 @@
+function initialize() {
+  var philadelphia = new google.maps.LatLng(39.9562, -76.1652);
+
+  var map = new google.maps.Map(ducument.getElementById('map'), {
+    center: philadelphia,
+    zoom: 15,
+    scrollwheel: false
+  });
+
+  var request = {
+    location: philadelphia,
+    radius: '500',
+    types: ['store']
+  };
+
+  var service = new google.maps.places.PlacesService(map);
+  service.nearbySearch(request, function(results, status) {
+    if(status == google.maps.places.PlacesServiceStatus.OK) {
+      for (var i=0; i < results.length; i++) {
+        var place = results[i];
+        var marker = new google.maps.Marker({
+          map: map,
+          position: place.geometry.location
+        });
+      }
+    }
+  });
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
 function getParameterByName(name, url) {
   "use strict";
   if (!url) {
@@ -17,7 +48,6 @@ function getParameterByName(name, url) {
 
 var points = parseInt(getParameterByName("points"), 10);
 var from = getParameterByName("from");
-
 
 switch (from) {
 case "depression":
@@ -60,7 +90,6 @@ case "sleep":
     document.getElementById("results").innerHTML = "Major Sleep Deprivation\n\nBased on your answers you are suffering from Major Sleep Deprivation. If it continues long enough, it can lower your body's defenses, putting you at risk of developing chronic illness. It is important that catch up of sleep and that you try to get at least 8 hours of sleep a night moving forward, and consider making an appointment with your local physician.";
   }
   break;
-
 case "malnutrition":
   if (points <= 2) {
     document.getElementById("results").innerHTML = "Based on your score it is unlikely that you are suffering from Malnutrition.\n\n";
