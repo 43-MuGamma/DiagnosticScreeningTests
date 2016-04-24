@@ -1,20 +1,3 @@
-function getParameterByName(name, url) {
-  "use strict";
-  if (!url) {
-    url = window.location.href;
-  }
-  name = name.replace(/[\[\]]/g, "\\$&");
-  var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)", "i"),
-    results = regex.exec(url);
-  if (!results) {
-    return null;
-  }
-  if (!results[2]) {
-    return '';
-  }
-  return decodeURIComponent(results[2].replace(/\+/g, " "));
-}
-
 function initMap() {
   if(navigator.getlocation){
     navigator.geolocation.getCurrentPosition(function(position, philadelphia){
@@ -46,7 +29,6 @@ function initMap() {
       });
       for (var i=0; i < results.length; i++) {
         var place = results[i];
-        console.log(place);
         var name = place.name + "\n\n" + place.vicinity;
         var marker = new google.maps.Marker({
           map: map,
