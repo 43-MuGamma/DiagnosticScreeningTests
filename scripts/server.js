@@ -1,7 +1,6 @@
 var express = require('express');
 var http = require("http");
 var path = require("path");
-var Firebase = require("firebase");
 
 var app = express();
 
