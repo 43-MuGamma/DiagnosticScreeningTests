@@ -25,7 +25,7 @@ case "depression":
   } else if (points >= 3 && points <= 12) {
     document.getElementById("results").innerHTML = "\n\nMild Depression\n\n Some of the items you responded to are symptoms of major depression, but you do not meet the diagnostic criteria for this disorder. However, these can be serious symptoms, especially if feelings of hopelessness or thoughts of suicide are predominant for you. If this is the case, you should seek out assistance, either through a licensed professional or through a close friend or family member whom you feel you can trust.  It is likely that you have a specific concern that you should look at.\n\n";
   } else if (points > 12) {
-    document.getElementById("results").innerHTML = "\n\nMajor Depression (10-15)\n\nYou have endorsed many of the symptoms commonly seen in people who suffer from major depression.  You should be concerned about these symptoms and it is likely that close friends and family members are also concerned.  It is highly recommended that you consider seeing a psychiatrist or psychologist for an evaluation.  Depression is a serious disorder but is highly treatable.\n\n";
+    document.getElementById("results").innerHTML = "\n\nMajor Depression \n\nYou have endorsed many of the symptoms commonly seen in people who suffer from major depression.  You should be concerned about these symptoms and it is likely that close friends and family members are also concerned.  It is highly recommended that you consider seeing a psychiatrist or psychologist for an evaluation.  Depression is a serious disorder but is highly treatable.\n\n";
   }
   break;
 case "anxiety":
@@ -34,9 +34,9 @@ case "anxiety":
   } else if (points >= 1 && points <= 5) {
     document.getElementById("results").innerHTML = "Some of the items you responded to are potential symptoms of anxiety. While you did not score high enough to be reliably diagnosed with anxiety, be sure you pay attention to your habits to detect possible anxiety in the future. \n\n";
   } else if (points > 5 && points <= 20) {
-    document.getElementById("results").innerHTML = "Moderate Anxiety (5-20)\n\nSome of the items you responded to are symptoms of generalized anxiety disorder and other disorders in this category. Your general symptoms may be mild, but it might be wise to look into those items which you endorsed to determine if they are resulting in difficulties in your life.\n\n";
+    document.getElementById("results").innerHTML = "Moderate Anxiety\n\nSome of the items you responded to are symptoms of generalized anxiety disorder and other disorders in this category. Your general symptoms may be mild, but it might be wise to look into those items which you endorsed to determine if they are resulting in difficulties in your life.\n\n";
   } else {
-    document.getElementById("results").innerHTML = "Major Anxiety (20-30)\n\nYou have endorsed many of the symptoms commonly seen in people who suffer from generalized anxiety disorder and other disorders in this category. You worry excessively, feel out of control at times, and fear that things will go wrong even without information to support this. If anxiety is causing you distress or getting in the way of achieving your goals, recommendations would include looking into therapy, medication, or a group.";
+    document.getElementById("results").innerHTML = "Major Anxiety\n\nYou have endorsed many of the symptoms commonly seen in people who suffer from generalized anxiety disorder and other disorders in this category. You worry excessively, feel out of control at times, and fear that things will go wrong even without information to support this. If anxiety is causing you distress or getting in the way of achieving your goals, recommendations would include looking into therapy, medication, or a group.";
   }
   break;
 case "intro_extro":
