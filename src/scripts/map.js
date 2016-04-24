@@ -1,6 +1,6 @@
-'use strict';
 
 function initMap() {
+  'use strict';
   if (navigator.getlocation) {
     navigator.geolocation.getCurrentPosition(function (position, philadelphia) {
       philadelphia = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
