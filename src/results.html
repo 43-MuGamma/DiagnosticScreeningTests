@@ -1,20 +1,22 @@
+<!DOCTYPE html>
 <html lang="eng">
-
 <head>
   <meta charset="utf-8">
   <meta name="description" content="Results page for the Diagnostic Screening Test">
   <link rel="stylesheet" type="text/css" href="css/results_styles.css">
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDImvDP7iinacXhxO5lfB5rVToFpFoo21A&libraries=places"></script>
-  <!-- include Google Maps API key  -->
   <title>Your results...</title>
 </head>
 
 <body>
   <h1>Your results...</h1>
-  <div id="results">
+  <div id="results"></div>
+  <br>
+  <div id="map">
+    <p>Remember, this is <b>not</b> a test to diagnose you with any condition. Only a doctor can do that. Below are the locations of some doctors in your area if you seek further information.</p>
+    <iframe src="map.html" width="100%" height="500"></iframe>
   </div>
-  <iframe id="map" src="map.html" width="700" height="500"></iframe>
-
 </body>
+<script src="scripts/results.js"></script>
 
 </html>

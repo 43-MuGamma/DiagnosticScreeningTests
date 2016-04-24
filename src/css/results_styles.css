@@ -1,3 +1,7 @@
+html {
+  background-color: #FEFEFE;
+}
+
 h1 {
   text-align: center;
   font-family: sans-serif;
@@ -10,12 +14,17 @@ h1 {
 #results {
   text-align: center;
   font-family: sans-serif;
-  margin-left: 20%;
-  margin-right: 20%;
+  font-size: 1.3em;
+  width:50%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 30px;
 }
 
 #map {
-  display: inline-block;
-  margin-left: 25%;
-  margin-right: 30%;
+  text-align: center;
+  height: 600px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
 }
