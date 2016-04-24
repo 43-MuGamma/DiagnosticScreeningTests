@@ -1,11 +1,13 @@
+'use strict';
+
 function initMap() {
-  if(navigator.getlocation){
-    navigator.geolocation.getCurrentPosition(function(position, philadelphia){
+  if (navigator.getlocation) {
+    navigator.geolocation.getCurrentPosition(function (position, philadelphia) {
       philadelphia = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
       console.log("loc");
-    })
+    });
   } else {
-    philadelphia = new google.maps.LatLng(39.9526,-75.1652);
+    var philadelphia = new google.maps.LatLng(39.9526, -75.1652);
     console.log("no loc");
   }
 
@@ -22,20 +24,20 @@ function initMap() {
   };
 
   var service = new google.maps.places.PlacesService(map);
-  service.nearbySearch(request, function(results, status) {
-    if(status == google.maps.places.PlacesServiceStatus.OK) {
+  service.nearbySearch(request, function (results, status) {
+    if (status === google.maps.places.PlacesServiceStatus.OK) {
       var infowindow = new google.maps.InfoWindow({
         content: "holding..."
       });
-      for (var i=0; i < results.length; i++) {
+      for (var i = 0; i < results.length; i++) {
         var place = results[i];
         var name = place.name + "\n\n" + place.vicinity;
         var marker = new google.maps.Marker({
           map: map,
-          title:name,
+          title: name,
           position: place.geometry.location
         });
-        marker.addListener('click', function(){
+        marker.addListener('click', function () {
           infowindow.setContent(this.title);
           infowindow.open(map, this);
         });
